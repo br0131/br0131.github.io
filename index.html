@@ -1,9 +1,21 @@
 <html>
    <head>
+      <title>Mouse Circle</title>
+      <style>
+         #circle{
+            position:fixed;
+            width:30px;
+            height:30px;
+            border-radius:50%;
+            border:2px solid #f00;
+            opacity:0.5;
+            pointer-events:none;
+            z-index:9999;
+         }
+      </style>
       <style>
         body{
             background-color:#f1f1f1;
- 
             }
          h1{
             align-items:center;    
@@ -22,6 +34,14 @@
       </style>
    </head>
    <body>
+      <div id="circle"></div>
+      <script>
+         document.addEventListener("mousemove",function(e){
+            var circle=document.getElementById("circle");
+            circle.style.left=e.clientX-15+"px";
+            circle.style.top=e.clientY-15+"px";
+         });
+      </script>
       <h1>BI RAN </h1><br>
       <h2>一个还在苦苦寻找方向的UI研究生</h2>
       <ul>
