@@ -14,6 +14,23 @@
          }
       </style>
       <style>
+         .box{
+            width:400px;
+            height:400px;
+            margin-top:100px;
+            margin-left:300px;
+            transition:all 0.4s;
+         }
+         .box:hover{
+            box-shadow:0 8px 8px 0 gray;
+            transform:translate(0,-10px);
+         }
+         .box-bd{
+            margin:20px 0 0 300px;
+            width:700px;
+         }
+      </style>
+      <style>
         body{
             background-color:#f8f8f8;
             }
@@ -38,6 +55,7 @@
    </head>
    <body>
       <div id="circle"></div>
+
       <script>
          document.addEventListener("mousemove",function(e){
             var circle=document.getElementById("circle");
